@@ -377,12 +377,6 @@
 }
 
 @layer components {
-  /* Renamed from .grid to avoid clashing with Tailwind's grid utility */
-  .site-grid {
-    @apply pointer-events-none absolute left-0 top-0 z-[100] h-full w-full;
-    background: url("/image/grid.png");
-  }
-
   .cite {
     @apply text-right italic;
   }
