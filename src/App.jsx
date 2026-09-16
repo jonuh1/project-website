@@ -42,8 +42,8 @@ const MEMBERS = [
     contact: '',
   },
   {
-    id: 'addision-lovegrove',
-    name: 'Addision Lovegrove',
+    id: 'addison-lovegrove',
+    name: 'Addison Lovegrove',
     role: 'Team Member',
     contact: '',
   },
