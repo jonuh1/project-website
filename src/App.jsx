@@ -39,7 +39,7 @@ const MEMBERS = [
     id: 'alyssa-pascal',
     name: 'Alyssa Pascal',
     role: 'Presenter',
-    contact: '',
+    contact: '26ln26@queensu.ca',
   },
   {
     id: 'addison-lovegrove',
