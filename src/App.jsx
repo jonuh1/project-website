@@ -20,38 +20,38 @@ const MEMBERS = [
   {
     id: 'ethan-rose',
     name: 'Ethan Rose',
-    role: 'Team Member',
+    role: 'Presenter',
     contact: '23nfd5@queensu.ca',
   },
   {
     id: 'jonah-schwartz',
     name: 'Jonah Schwartz',
-    role: 'Team Member',
-    contact: '',
+    role: 'Group MEmber',
+    contact: 'jonah.schwartz@queensu.ca',
   },
   {
     id: 'emilia-markovic',
     name: 'Emilia Markovic',
-    role: 'Team Member',
-    contact: '',
+    role: 'Group Member',
+    contact: '23jf44@queensu.ca',
   },
   {
     id: 'alyssa-pascal',
     name: 'Alyssa Pascal',
-    role: 'Team Member',
+    role: 'Presenter',
     contact: '',
   },
   {
     id: 'addison-lovegrove',
     name: 'Addison Lovegrove',
-    role: 'Team Member',
-    contact: '',
+    role: 'Group Member',
+    contact: '23ppb3@queensu.ca',
   },
   {
     id: 'emili-ribakov',
     name: 'Emili Ribakov',
-    role: 'Team Member',
-    contact: '',
+    role: 'Group Leader',
+    contact: 'emili.ribakov@queensu.ca',
   },
 ]
 
@@ -139,7 +139,7 @@ function App() {
         </nav>
 
         <article>
-          <h1 className="m-0 py-3.5 pt-[18px]">Team 25</h1>
+          <h1 className="m-0 py-3.5 pt-[18px]">Wezzards of Oz</h1>
 
           <p className="mt-4">
             This site hosts the deliverables for CISC-326 Software Architecture 
