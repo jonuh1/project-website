@@ -26,7 +26,7 @@ const MEMBERS = [
   {
     id: 'jonah-schwartz',
     name: 'Jonah Schwartz',
-    role: 'Group MEmber',
+    role: 'Group Member',
     contact: 'jonah.schwartz@queensu.ca',
   },
   {
@@ -139,7 +139,7 @@ function App() {
         </nav>
 
         <article>
-          <h1 className="m-0 py-3.5 pt-[18px]">Wezzards of Oz</h1>
+          <h1 className="m-0 py-3.5 pt-[18px]">Wezards of Oz</h1>
 
           <p className="mt-4">
             This site hosts the deliverables for CISC-326 Software Architecture 
