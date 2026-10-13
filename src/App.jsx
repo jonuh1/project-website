@@ -28,7 +28,7 @@ const STAGES = [
       {
         label: 'Presentation',
         href: 'https://youtu.be/kL4GgK6Ji-M',
-        text: 'WezTerm - A0',
+        text: 'WezTerm - A1',
       },
     ],
   },
