@@ -3,6 +3,34 @@ const STAGES = [
     id: 'a1',
     code: 'A1',
     title: 'Conceptual Architecture',
+    materials: [
+      {
+        label: 'Documentation',
+        href: 'https://wezterm.org/',
+        text: 'WezTerm',
+      },
+      {
+        label: 'Reference material',
+        text: 'D. Garlan and M. Shaw, “An Introduction to Software Architecture,” Carnegie Mellon University, Tech. Rep. CMU-CS-94-166, Jan. 1994',
+      },
+    ],
+    submissions: [
+      {
+        label: 'Report',
+        href: `${import.meta.env.BASE_URL}a1-resources/conceptual_architecture_report.pdf`,
+        text: 'Conceptual architecture report',
+      },
+      {
+        label: 'Slides',
+        href: `${import.meta.env.BASE_URL}a1-resources/${encodeURIComponent('A1 - Software Architecture of WezTerm.pdf')}`,
+        text: 'A1 - Software Architecture of WezTerm',
+      },
+      {
+        label: 'Presentation',
+        href: 'https://youtu.be/kL4GgK6Ji-M',
+        text: 'WezTerm - A0',
+      },
+    ],
   },
   {
     id: 'a2',
@@ -61,7 +89,36 @@ const NAV_LINKS = [
   { href: '#sources', label: 'sources' },
 ]
 
+function StageItem({ item }) {
+  if (!item?.href) {
+    return (
+      <span className="placeholder-slot">
+        {item?.label ? `${item.label} — TBD` : 'TBD'}
+      </span>
+    )
+  }
+
+  return (
+    <>
+      <span className="text-ink">{item.label}: </span>
+      <a href={item.href} target="_blank" rel="noreferrer">
+        {item.text}
+      </a>
+    </>
+  )
+}
+
 function StageSection({ stage }) {
+  const materials = stage.materials ?? [
+    { label: 'Documentation link' },
+    { label: 'Reference material' },
+  ]
+  const submissions = stage.submissions ?? [
+    { label: 'Report' },
+    { label: 'Slides' },
+    { label: 'Presentation' },
+  ]
+
   return (
     <section className="mt-10 scroll-mt-8 first:mt-6" id={stage.id}>
       <h3 className="mb-4 py-[3px] pt-[13px]">
@@ -74,27 +131,35 @@ function StageSection({ stage }) {
       <div className="placeholder-block mt-4 px-4 pb-3 pt-3">
         <p className="placeholder-label mb-2">Course materials</p>
         <ul className="placeholder-list ml-8 mt-3 list-none p-0">
-          <li className="relative m-0">
-            <span className="placeholder-slot">Documentation link — TBD</span>
-          </li>
-          <li className="relative mt-2">
-            <span className="placeholder-slot">Reference material — TBD</span>
-          </li>
+          {materials.map((item, index) => (
+            <li
+              className={index === 0 ? 'relative m-0' : 'relative mt-2'}
+              key={item.label}
+            >
+              {item.href || !item.text ? (
+                <StageItem item={item} />
+              ) : (
+                <>
+                  <span className="text-ink">{item.label}: </span>
+                  <span>{item.text}</span>
+                </>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
 
       <div className="placeholder-block mt-3 px-4 pb-3 pt-3">
         <p className="placeholder-label mb-2">Submissions</p>
         <ul className="placeholder-list ml-8 mt-3 list-none p-0">
-          <li className="relative m-0">
-            <span className="placeholder-slot">Report — TBD</span>
-          </li>
-          <li className="relative mt-2">
-            <span className="placeholder-slot">Slides — TBD</span>
-          </li>
-          <li className="relative mt-2">
-            <span className="placeholder-slot">Presentation — TBD</span>
-          </li>
+          {submissions.map((item, index) => (
+            <li
+              className={index === 0 ? 'relative m-0' : 'relative mt-2'}
+              key={item.label}
+            >
+              <StageItem item={item} />
+            </li>
+          ))}
         </ul>
       </div>
     </section>

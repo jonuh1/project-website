@@ -156,8 +156,13 @@
     @apply text-hover;
   }
 
-  p a {
+  p a,
+  #stages section a {
     text-decoration: underline var(--color-link-underline);
+  }
+
+  #stages section a:hover {
+    text-decoration: underline var(--color-hover);
   }
 
   code {
