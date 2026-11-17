@@ -36,6 +36,34 @@ const STAGES = [
     id: 'a2',
     code: 'A2',
     title: 'Concrete Architecture',
+    materials: [
+      {
+        label: 'GitHub',
+        href: 'https://github.com/wezterm/',
+        text: 'WezTerm',
+      },
+      {
+        label: 'Reference material',
+        text: 'D. Garlan and M. Shaw, “An Introduction to Software Architecture,” Carnegie Mellon University, Tech. Rep. CMU-CS-94-166, Jan. 1994',
+      },
+    ],
+    submissions: [
+      {
+        label: 'Report',
+        href: `${import.meta.env.BASE_URL}a2-resources/wezterm_a2_report.pdf`,
+        text: 'Concrete architecture report',
+      },
+      {
+        label: 'Slides',
+        href: `${import.meta.env.BASE_URL}a2-resources/${encodeURIComponent("A2_ WezTerm's Concrete Architecture.pdf")}`,
+        text: "A2_ WezTerm's Concrete Architecture",
+      },
+      {
+        label: 'Presentation',
+        href: 'https://youtu.be/doxHkNbkUcU',
+        text: 'WezTerm - A2',
+      },
+    ],
   },
   {
     id: 'a3',
